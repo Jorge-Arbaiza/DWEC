@@ -1,15 +1,12 @@
 $(document).ready(function () {
    $("#ocultar").click(function (){
       
-    $("#pikachu").animate({
-        opacity: 0
-    });
+    $("#pikachu").fadeOut("slow");
+
    });
    $("#mostrar").click(function (){
       
-    $("#pikachu").animate({
-        opacity: 100
-    },1500);
+    $("#pikachu").fadeIn("slow");
    });
    $("#encoger").click(function (){
       

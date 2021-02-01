@@ -1,15 +1,11 @@
 $(document).ready(function () {
    $("#despedida").click(function (){
       
-    $("#texto").animate({
-        opacity: 0
-    });
+    $("#texto").fadeOut("slow");
    });
    $("#saludo").click(function (){
       
-    $("#texto").animate({
-        opacity: 1
-    });
+    $("#texto").fadeIn("slow");
    });
    
    

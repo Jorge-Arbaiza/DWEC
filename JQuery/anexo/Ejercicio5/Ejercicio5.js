@@ -1,11 +1,17 @@
 
 $(document).ready(function (){
-       $.getJSON("https://restcountries.eu/rest/v2/region/europe", function(data){
+      var request = $.getJSON("https://restcountries.eu/rest/v2/region/europe", function(data){
         var items = [];
         $.each( data, function( key, val){
             items.push("<li id='" + key + "'>" + val.name + "</li>");
         });
-        $("#miUl").html(items.join(""));
-       
+        request.done(function (){
+            $("#miUl").html(items.join(""))
+        });
+        });
+        
+        request.fail(function( jqXHR, textStatus ) {
+            alert( "Request failed: " + jqXHR.status + ' ' + textStatus);
+        });
        });
-    });
+    

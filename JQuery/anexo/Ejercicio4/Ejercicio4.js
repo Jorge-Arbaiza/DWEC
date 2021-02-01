@@ -4,13 +4,8 @@ $(document).ready(function (){
        e.preventDefault();
        var serialize = serial.serialize();
        
-       $.ajax({
-           url: "php/datos.php",
-           method: "GET",
-           data: serialize,
-           success: function( msg ) {
-            $("#miDiv").html( msg )
-        }
+       $.get("php/datos.php", serialize, function( msg ) {
+            $("#miDiv").html( msg );
+        });
        });
-});
 });
