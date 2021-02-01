@@ -1,0 +1,11 @@
+.contenedor {
+background-color: blue;
+text-align: center;
+line-height: 300px;
+
+}
+#texto{
+    color: white;
+    display:inline-block;
+    vertical-align: middle;
+}
