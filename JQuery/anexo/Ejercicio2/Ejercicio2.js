@@ -2,15 +2,14 @@
 $(document).ready(function (){
     $("#show").click(function (){
         var request = $.ajax({
-        url:"php/dato.php",
+        url:"php/datos.php",
         beforeSend:function () {
         $("#miDiv").html('<img src="img/carga.gif" alt="carga" />')
     },
-        success: function( msg ) {
-            $("#miDiv").html( msg )
-        }
+        
         });
-        request.done(function() {
+        request.done(function(msg) {
+            $("#miDiv").html( msg )
             alert("Transferencia completada");
         });
         request.fail(function( jqXHR, textStatus ) {

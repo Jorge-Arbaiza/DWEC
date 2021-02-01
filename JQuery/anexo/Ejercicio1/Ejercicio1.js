@@ -7,7 +7,7 @@ $(document).ready(function (){
     request.done(function( msg ) {
         $("#miDiv").html( msg )
     });
-    request.fail(function( jqXHR, textStatus ) {
+    request.fail(function( textStatus ) {
         alert( "Request failed: " + textStatus);
     });
 });
