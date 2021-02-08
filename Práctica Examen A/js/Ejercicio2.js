@@ -9,7 +9,7 @@ $(document).ready(function() {
         event.preventDefault();
         var serial = $("form").serialize();
         if ($("#box").val('checked')) {
-            alert("Aquí la publicidad")
+
             window.location = "ejercicio3.html?" + serial
         } else {
             window.location = "ejercicio3.html?" + serial
