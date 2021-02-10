@@ -46,4 +46,49 @@ $(document).ready(function() {
     $("h1").mouseover(function() {
         $("h1").plugin();
     });
+    $(".miSelect").change(function() {
+        $("select option:selected").each(function() {
+            if ($(this).val() == "verde") {
+                $("body").append("<div id='miDiv2'>VERDE</div>");
+                $("#miDiv3").remove();
+                $("#miDiv4").remove();
+                $("#miDiv2").mouseover(function() {
+                    $("#miDiv2").css("background-color", "green");
+                    $("#miDiv2").css("opacity", "0.5");
+                });
+                $("#miDiv2").mouseout(function() {
+                    $("#miDiv2").css("background-color", "");
+                    $("#miDiv2").css("opacity", "1");
+                });
+            }
+            if ($(this).val() == "rojo") {
+                $("body").append("<div id='miDiv3'>ROJO</div>");
+                $("#miDiv2").remove();
+                $("#miDiv4").remove();
+                $("#miDiv3").mouseover(function() {
+                    $("#miDiv3").css("background-color", "red");
+                    $("#miDiv3").css("opacity", "0.5");
+                });
+                $("#miDiv3").mouseout(function() {
+                    $("#miDiv3").css("background-color", "");
+                    $("#miDiv3").css("opacity", "1");
+                });
+            }
+            if ($(this).val() == "azul") {
+                $("body").append("<div id='miDiv4'>AZUL</div>");
+                $("#miDiv3").remove();
+                $("#miDiv2").remove();
+                $("#miDiv4").mouseover(function() {
+                    $("#miDiv4").css("background-color", "blue");
+                    $("#miDiv4").css("opacity", "0.5");
+                });
+                $("#miDiv4").mouseout(function() {
+                    $("#miDiv4").css("background-color", "");
+                    $("#miDiv4").css("opacity", "1");
+                });
+            }
+        });
+
+
+    })
 });
