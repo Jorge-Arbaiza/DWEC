@@ -1,0 +1,10 @@
+<div>
+    <p>Introduce un número<input type="text" [(ngModel)]="numero1"></p>
+    <p>Introduce un número<input type="text" [(ngModel)]="numero2"></p>
+</div>
+<div>
+    <p>{{resultado}}</p>
+    <p *ngIf="resultado>100">El resultado es mayor de 100</p>
+    <p *ngIf="resultado<100">El resultado es menor de 100</p>
+    <button (click)="suma()">Sumar</button>
+</div>

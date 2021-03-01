@@ -13,7 +13,7 @@ $(document).ready(function() {
 
         });
         get_php.done(function(php) {
-            $("#datos_php").html(php);
+            $("#miDiv").html(php);
         })
         get_php.fail(function() {
             alert("error");
